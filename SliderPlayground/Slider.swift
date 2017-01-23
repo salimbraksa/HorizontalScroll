@@ -16,7 +16,7 @@ class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLa
     
     // MARK: - Properties
     
-    fileprivate var configuration = Configuration()
+    var configuration = Configuration()
     fileprivate(set) var currentPage: Int = 0
     fileprivate var pageWidth: CGFloat {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -31,6 +31,11 @@ class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLa
         initialize()
     }
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -41,6 +46,14 @@ class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLa
     }
     
     private func initialize() {
+        
+        // Instantiate collection view
+        guard let collectionView = Bundle.main.loadNibNamed("Slider", owner: self, options: nil)?.first as? UICollectionView else { return }
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.frame = bounds
+        addSubview(collectionView)
+        self.collectionView = collectionView
         
         // Configure collection view
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
@@ -56,7 +69,6 @@ class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLa
     
     func configure(with configuration: Configuration) {
         self.configuration = configuration
-        collectionView.reloadData()
     }
     
     struct Configuration {
