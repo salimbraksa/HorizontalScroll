@@ -14,6 +14,8 @@
 		FA596F331E2F07FA00F3813E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA596F311E2F07FA00F3813E /* LaunchScreen.storyboard */; };
 		FA596F3C1E2F082300F3813E /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA596F3B1E2F082300F3813E /* Slider.swift */; };
 		FA596F401E2F087C00F3813E /* Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA596F3F1E2F087C00F3813E /* Slider.xib */; };
+		FA76D9001E365A7B006E9E22 /* SliderLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76D8FF1E365A7B006E9E22 /* SliderLayout.swift */; };
+		FA76D9021E36A374006E9E22 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA76D9011E36A374006E9E22 /* Pagination.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FA596F341E2F07FA00F3813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA596F3B1E2F082300F3813E /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
 		FA596F3F1E2F087C00F3813E /* Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slider.xib; sourceTree = "<group>"; };
+		FA76D8FF1E365A7B006E9E22 /* SliderLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderLayout.swift; sourceTree = "<group>"; };
+		FA76D9011E36A374006E9E22 /* Pagination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,8 @@
 			children = (
 				FA596F3B1E2F082300F3813E /* Slider.swift */,
 				FA596F3F1E2F087C00F3813E /* Slider.xib */,
+				FA76D8FF1E365A7B006E9E22 /* SliderLayout.swift */,
+				FA76D9011E36A374006E9E22 /* Pagination.swift */,
 			);
 			name = Slider;
 			sourceTree = "<group>";
@@ -161,6 +167,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA596F2B1E2F07FA00F3813E /* ViewController.swift in Sources */,
+				FA76D9001E365A7B006E9E22 /* SliderLayout.swift in Sources */,
+				FA76D9021E36A374006E9E22 /* Pagination.swift in Sources */,
 				FA596F3C1E2F082300F3813E /* Slider.swift in Sources */,
 				FA596F291E2F07FA00F3813E /* AppDelegate.swift in Sources */,
 			);
@@ -326,6 +334,7 @@
 				FA596F391E2F07FA00F3813E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
