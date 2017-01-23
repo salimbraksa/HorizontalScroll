@@ -12,6 +12,8 @@
 		FA596F2E1E2F07FA00F3813E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA596F2C1E2F07FA00F3813E /* Main.storyboard */; };
 		FA596F301E2F07FA00F3813E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA596F2F1E2F07FA00F3813E /* Assets.xcassets */; };
 		FA596F331E2F07FA00F3813E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA596F311E2F07FA00F3813E /* LaunchScreen.storyboard */; };
+		FA596F3C1E2F082300F3813E /* Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA596F3B1E2F082300F3813E /* Slider.swift */; };
+		FA596F401E2F087C00F3813E /* Slider.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA596F3F1E2F087C00F3813E /* Slider.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		FA596F2F1E2F07FA00F3813E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA596F321E2F07FA00F3813E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA596F341E2F07FA00F3813E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA596F3B1E2F082300F3813E /* Slider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slider.swift; sourceTree = "<group>"; };
+		FA596F3F1E2F087C00F3813E /* Slider.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Slider.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		FA596F271E2F07FA00F3813E /* SliderPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				FA596F281E2F07FA00F3813E /* AppDelegate.swift */,
+				FA596F3E1E2F087000F3813E /* Slider */,
 				FA596F2A1E2F07FA00F3813E /* ViewController.swift */,
 				FA596F2C1E2F07FA00F3813E /* Main.storyboard */,
+				FA596F3A1E2F080000F3813E /* Supporting */,
+			);
+			path = SliderPlayground;
+			sourceTree = "<group>";
+		};
+		FA596F3A1E2F080000F3813E /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				FA596F281E2F07FA00F3813E /* AppDelegate.swift */,
 				FA596F2F1E2F07FA00F3813E /* Assets.xcassets */,
 				FA596F311E2F07FA00F3813E /* LaunchScreen.storyboard */,
 				FA596F341E2F07FA00F3813E /* Info.plist */,
 			);
-			path = SliderPlayground;
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		FA596F3E1E2F087000F3813E /* Slider */ = {
+			isa = PBXGroup;
+			children = (
+				FA596F3B1E2F082300F3813E /* Slider.swift */,
+				FA596F3F1E2F087C00F3813E /* Slider.xib */,
+			);
+			name = Slider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +148,7 @@
 			files = (
 				FA596F331E2F07FA00F3813E /* LaunchScreen.storyboard in Resources */,
 				FA596F301E2F07FA00F3813E /* Assets.xcassets in Resources */,
+				FA596F401E2F087C00F3813E /* Slider.xib in Resources */,
 				FA596F2E1E2F07FA00F3813E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA596F2B1E2F07FA00F3813E /* ViewController.swift in Sources */,
+				FA596F3C1E2F082300F3813E /* Slider.swift in Sources */,
 				FA596F291E2F07FA00F3813E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
