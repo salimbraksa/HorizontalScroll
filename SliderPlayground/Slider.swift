@@ -8,28 +8,33 @@
 
 import UIKit
 
-class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+protocol SliderDataSource: class {
     
+    func slider(_ slider: Slider, cellForItemAt index: Int) -> UICollectionViewCell
+    
+    func numberOfItems(inSlider slider: Slider) -> Int
+    
+    func sizeForItems(with slider: Slider) -> CGSize
+    
+}
+
+class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {
+        
     // MARK: - Views
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Properties
     
-    var configuration = Configuration()
+    var dataSource: SliderDataSource!
+    
     fileprivate(set) var currentPage: Int = 0
     fileprivate var pageWidth: CGFloat {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        return configuration.itemSize.width + layout.minimumInteritemSpacing
+        return dataSource.sizeForItems(with: self).width + layout.minimumInteritemSpacing
     }
     
     // MARK: - Initializer
-    
-    init(configuration: Configuration) {
-        super.init(frame: .zero)
-        configure(with: configuration)
-        initialize()
-    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -65,35 +70,36 @@ class Slider: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLa
         
     }
     
-    // MARK: - Configuration
-    
-    func configure(with configuration: Configuration) {
-        self.configuration = configuration
-    }
-    
-    struct Configuration {
-        var itemSize: CGSize = CGSize(width: 300, height: -1)
-        var visibleItemPortion = 0.05
-    }
-    
-    
     // MARK: - UICollectionViewDataSource Protocl Methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return dataSource.numberOfItems(inSlider: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell-id", for: indexPath)
-        cell.backgroundColor = .red
-        return cell
+        return dataSource.slider(self, cellForItemAt: indexPath.row)
     }
     
     // MARK: - UICollectionViewDelegateFlowLayout Protocol Methods
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let height = configuration.itemSize.height == -1 ? bounds.height : configuration.itemSize.height
-        return CGSize(width: configuration.itemSize.width, height: height)
+        var size = dataSource.sizeForItems(with: self)
+        if size.height < 0 {
+            size.height = bounds.height
+        }
+        return size
+    }
+    
+    // MARK: - Dequeue
+    
+    func dequeueReusableCell(withReuseIdentifier reuseIdentifier: String, forIndex index: Int) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: IndexPath(item: index, section: 0))
+    }
+    
+    // MARK: - Register Cells
+    
+    func register(nib: UINib?, forCellWithReusueIdentifier identifier: String) {
+        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
     }
     
 }

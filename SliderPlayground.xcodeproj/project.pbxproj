@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2B17E51E38048700C2A4D3 /* ocraextended.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA2B17E41E38048700C2A4D3 /* ocraextended.ttf */; };
+		FA2B17E71E38065B00C2A4D3 /* CreditCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B17E61E38065B00C2A4D3 /* CreditCardCell.swift */; };
+		FA3E2F7D1E37FF5D0000E152 /* CreditCardCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E2F7C1E37FF5D0000E152 /* CreditCardCell.xib */; };
 		FA596F291E2F07FA00F3813E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA596F281E2F07FA00F3813E /* AppDelegate.swift */; };
 		FA596F2B1E2F07FA00F3813E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA596F2A1E2F07FA00F3813E /* ViewController.swift */; };
 		FA596F2E1E2F07FA00F3813E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA596F2C1E2F07FA00F3813E /* Main.storyboard */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2B17E41E38048700C2A4D3 /* ocraextended.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocraextended.ttf; sourceTree = "<group>"; };
+		FA2B17E61E38065B00C2A4D3 /* CreditCardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCell.swift; sourceTree = "<group>"; };
+		FA3E2F7C1E37FF5D0000E152 /* CreditCardCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreditCardCell.xib; sourceTree = "<group>"; };
 		FA596F251E2F07FA00F3813E /* SliderPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SliderPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA596F281E2F07FA00F3813E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA596F2A1E2F07FA00F3813E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +70,8 @@
 				FA596F2A1E2F07FA00F3813E /* ViewController.swift */,
 				FA596F2C1E2F07FA00F3813E /* Main.storyboard */,
 				FA596F3A1E2F080000F3813E /* Supporting */,
+				FA3E2F7C1E37FF5D0000E152 /* CreditCardCell.xib */,
+				FA2B17E61E38065B00C2A4D3 /* CreditCardCell.swift */,
 			);
 			path = SliderPlayground;
 			sourceTree = "<group>";
@@ -71,6 +79,7 @@
 		FA596F3A1E2F080000F3813E /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				FA2B17E41E38048700C2A4D3 /* ocraextended.ttf */,
 				FA596F281E2F07FA00F3813E /* AppDelegate.swift */,
 				FA596F2F1E2F07FA00F3813E /* Assets.xcassets */,
 				FA596F311E2F07FA00F3813E /* LaunchScreen.storyboard */,
@@ -150,6 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA596F331E2F07FA00F3813E /* LaunchScreen.storyboard in Resources */,
+				FA3E2F7D1E37FF5D0000E152 /* CreditCardCell.xib in Resources */,
+				FA2B17E51E38048700C2A4D3 /* ocraextended.ttf in Resources */,
 				FA596F301E2F07FA00F3813E /* Assets.xcassets in Resources */,
 				FA596F401E2F087C00F3813E /* Slider.xib in Resources */,
 				FA596F2E1E2F07FA00F3813E /* Main.storyboard in Resources */,
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA2B17E71E38065B00C2A4D3 /* CreditCardCell.swift in Sources */,
 				FA596F2B1E2F07FA00F3813E /* ViewController.swift in Sources */,
 				FA76D9001E365A7B006E9E22 /* SliderLayout.swift in Sources */,
 				FA596F3C1E2F082300F3813E /* Slider.swift in Sources */,
